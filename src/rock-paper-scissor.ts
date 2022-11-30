@@ -18,5 +18,4 @@ export function rockPaperScissors(movePlayer1: Moves, movePlayer2: Moves) {
     }
 
     return GameWinner.PLAYER_1;
-
 }

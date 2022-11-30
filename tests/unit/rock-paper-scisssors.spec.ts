@@ -3,7 +3,6 @@ import { Moves } from '../../src/moves';
 import { GameWinner } from '../../src/game-winner';
 
 
-
 describe('Rock paper scissors game', () => {
     it.each([
         [Moves.ROCK, Moves.SCISSORS, GameWinner.PLAYER_1],
