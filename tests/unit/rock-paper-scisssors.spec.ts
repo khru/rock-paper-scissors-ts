@@ -27,6 +27,10 @@ function rockPaperScissors(movePlayer1: Moves, movePlayer2: Moves) {
         return GameWinner.DRAW;
     }
 
+    if (movePlayer1 === Moves.PAPER && movePlayer2 === Moves.PAPER) {
+        return GameWinner.DRAW;
+    }
+
     if (winMovements[movePlayer1] === movePlayer2) {
         return GameWinner.PLAYER_2;
     }
