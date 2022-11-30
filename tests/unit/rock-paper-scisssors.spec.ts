@@ -19,6 +19,10 @@ const winMovements = {
 
 function rockPaperScissors(movePlayer1: Moves, movePlayer2: Moves) {
 
+    if (movePlayer1 === Moves.ROCK && movePlayer2 === Moves.ROCK) {
+        return GameWinner.DRAW;
+    }
+
     if (winMovements[movePlayer1] === movePlayer2) {
         return GameWinner.PLAYER_2;
     }
