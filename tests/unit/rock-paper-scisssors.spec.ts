@@ -1,4 +1,5 @@
 function rockPaperScissors(movePlayer1: string, movePlayer2: string) {
+    return 'Player 1';
 }
 
 describe('Rock paper scissors game', () => {
