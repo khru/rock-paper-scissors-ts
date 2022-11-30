@@ -17,4 +17,10 @@ describe('Rock paper scissors game', () => {
         const expectedWinner = 'Player 2';
         expect(actualWinner).toBe(expectedWinner);
     });
+
+    it('given that I have chosen paper when the opponent chooses rock then I should win', () => {
+        const actualWinner = rockPaperScissors('paper','rock');
+        const expectedWinner = 'Player 1';
+        expect(actualWinner).toBe(expectedWinner);
+    });
 });
