@@ -1,35 +1,8 @@
+import { rockPaperScissors } from '../../src/rock-paper-scissor';
+import { Moves } from '../../src/moves';
+import { GameWinner } from '../../src/game-winner';
 
-enum GameWinner {
-    PLAYER_1 = 'Player 1',
-    PLAYER_2 = 'Player 2',
-    DRAW = "Draw",
-}
 
-enum Moves {
-    ROCK = 'Rock',
-    PAPER = 'Paper',
-    SCISSORS = 'Scissors',
-}
-
-const winMovements = {
-    [Moves.ROCK]: Moves.PAPER,
-    [Moves.PAPER]: Moves.SCISSORS,
-    [Moves.SCISSORS]: Moves.ROCK,
-}
-
-function rockPaperScissors(movePlayer1: Moves, movePlayer2: Moves) {
-
-    if (movePlayer1 === movePlayer2) {
-        return GameWinner.DRAW;
-    }
-
-    if (winMovements[movePlayer1] === movePlayer2) {
-        return GameWinner.PLAYER_2;
-    }
-
-    return GameWinner.PLAYER_1;
-
-}
 
 describe('Rock paper scissors game', () => {
     it.each([
@@ -42,7 +15,7 @@ describe('Rock paper scissors game', () => {
         [Moves.ROCK, Moves.ROCK, GameWinner.DRAW],
         [Moves.SCISSORS, Moves.SCISSORS, GameWinner.DRAW],
         [Moves.PAPER, Moves.PAPER, GameWinner.DRAW],
-    ])('when I play %s and the opponent plays %s the %s', (myMove: Moves, opponentMove: Moves, expectedWinner: GameWinner) => {
+    ])('when I play %s and the opponent plays %s the %s should win', (myMove: Moves, opponentMove: Moves, expectedWinner: GameWinner) => {
         const actualWinner = rockPaperScissors(myMove, opponentMove);
         expect(actualWinner).toBe(expectedWinner);
     });
