@@ -10,25 +10,20 @@ enum Moves {
     SCISSORS = 'Scissors',
 }
 
+const winMovements = {
+    [Moves.ROCK]: Moves.PAPER,
+    [Moves.PAPER]: Moves.SCISSORS,
+    [Moves.SCISSORS]: Moves.ROCK,
+}
+
 function rockPaperScissors(movePlayer1: Moves, movePlayer2: Moves) {
 
-    if (movePlayer1 === Moves.ROCK && movePlayer2 === Moves.PAPER) {
+    if (winMovements[movePlayer1] === movePlayer2) {
         return GameWinner.PLAYER_2;
     }
 
-    if (movePlayer1 === Moves.SCISSORS && movePlayer2 === Moves.PAPER) {
-        return GameWinner.PLAYER_1;
-    }
+    return GameWinner.PLAYER_1;
 
-    if (movePlayer1 === Moves.ROCK && movePlayer2 === Moves.SCISSORS) {
-        return GameWinner.PLAYER_1;
-    }
-
-    if (movePlayer1 === Moves.PAPER && movePlayer2 === Moves.ROCK) {
-        return GameWinner.PLAYER_1;
-    }
-
-    return GameWinner.PLAYER_2;
 }
 
 describe('Rock paper scissors game', () => {
