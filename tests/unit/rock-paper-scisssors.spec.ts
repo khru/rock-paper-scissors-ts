@@ -11,6 +11,11 @@ enum Moves {
 }
 
 function rockPaperScissors(movePlayer1: Moves, movePlayer2: Moves) {
+
+    if (movePlayer1 === Moves.ROCK && movePlayer2 === Moves.PAPER) {
+        return Players.PLAYER_2;
+    }
+
     if (movePlayer1 == Moves.ROCK) {
         return Players.PLAYER_1;
     }
