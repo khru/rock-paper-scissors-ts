@@ -7,13 +7,13 @@ function rockPaperScissors(movePlayer1: string, movePlayer2: string) {
 
 describe('Rock paper scissors game', () => {
     it('given that I have chosen rock when the opponent chooses scissors then I should win', () => {
-        const actualWinner = rockPaperScissors("rock","scissors");
+        const actualWinner = rockPaperScissors('rock','scissors');
         const expectedWinner = 'Player 1';
         expect(actualWinner).toBe(expectedWinner);
     });
 
     it('given that I have chosen scissors when the opponent chooses rock then the opponent should win', () => {
-        const actualWinner = rockPaperScissors("scissors","rock");
+        const actualWinner = rockPaperScissors('scissors','rock');
         const expectedWinner = 'Player 2';
         expect(actualWinner).toBe(expectedWinner);
     });
