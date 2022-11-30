@@ -45,6 +45,7 @@ describe('Rock paper scissors game', () => {
         [Moves.PAPER, Moves.SCISSORS, GameWinner.PLAYER_2],
         [Moves.ROCK, Moves.ROCK, GameWinner.DRAW],
         [Moves.SCISSORS, Moves.SCISSORS, GameWinner.DRAW],
+        [Moves.PAPER, Moves.PAPER, GameWinner.DRAW],
     ])('when I play %s and the opponent plays %s the %s', (myMove: Moves, opponentMove: Moves, expectedWinner: GameWinner) => {
         const actualWinner = rockPaperScissors(myMove, opponentMove);
         expect(actualWinner).toBe(expectedWinner);
