@@ -2,6 +2,11 @@ function rockPaperScissors(movePlayer1: string, movePlayer2: string) {
     if (movePlayer1 == 'rock') {
         return 'Player 1';
     }
+
+    if (movePlayer1 === 'paper') {
+        return 'Player 1';
+    }
+
     return 'Player 2';
 }
 
